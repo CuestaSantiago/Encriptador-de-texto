@@ -5,19 +5,26 @@ const vocalesEncriptadas = ["ai", "enter", "imes", "ober", "ufat"];
 let mensajeEncriptado ="";
 const totalVocales= vocales.length
 let index = 0
+let mensaje = document.getElementById("recibirMensaje");
 const init= ()=>{  
-  let mensaje = document.getElementById("recibirMensaje").value;
-  return mensaje.trim().split(separador);
+
+  // if (mensaje.length >0) {
+    return mensaje.value.trim().split(separador);
+  // }else{
+  //   mostrarMensajeError()
+  // }
    
 }
 
 const encriptarMensaje = () => {
 let separarPalabras = init()
-for(let i = 0; i < separarPalabras.length; i++) {
-  mensajeEncriptado += encriptar(separarPalabras[i].toLowerCase())+" ";
-};
-document.getElementById("darMensaje").value = mensajeEncriptado.trim();
-mensajeEncriptado ="";
+let msmRecibir = document.getElementById("darMensaje") 
+  for(let i = 0; i < separarPalabras.length; i++) {
+    mensajeEncriptado += encriptar(separarPalabras[i].toLowerCase())+" ";
+  };
+  msmRecibir.value = mensajeEncriptado.trim();
+  msmRecibir.style.backgroundImage = "none"
+  mensajeEncriptado ="";
 };
 
 function encriptar(mensaje) {

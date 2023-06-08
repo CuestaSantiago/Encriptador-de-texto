@@ -18,15 +18,49 @@ main {
   margin-left: 80px;
 }
 
+.textarea-container {
+  position: relative;
+  display: inline-block;
+}
+
+.btn_limpiar {    
+  position: absolute;
+  top: 51px;
+  right: 0px;
+  cursor: pointer;
+  color: red;
+  font-size: 50px;
+  display: none;
+}
+
+.message {
+  position: absolute;
+  top: 30px;
+  right: 5px;
+  color: #0a3871;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.btn_limpiar:hover + .message {
+  visibility: visible;
+  opacity: 1;
+}
+
 .recibir_mensaje {
   border: none;
   color: #0a3871;
   margin-top: 90px;
   text-transform: lowercase;
+  line-height: 32px;
 }
+
 ::placeholder {
   color: #0a3871;
 }
+
 .recibir_mensaje:focus {
   outline: none;
 }
@@ -43,7 +77,6 @@ main {
   margin-top: 20px;
   padding-top: 20px;
   padding-left: 20px;
-  /* position: fixed; */
   height: 450px;
   line-height: 32px;
 }
@@ -61,7 +94,7 @@ main {
   margin-top: 18px;
 }
 
-.mensaje_vacio, span{
+.mensaje_vacio{
   position: absolute;
   font-size: 20px;
   margin-left: 98px;
@@ -72,6 +105,7 @@ main {
   width: 342px;
   line-height: 32px;
   background: none;
+  display: none;
 }
 
 button {
@@ -104,4 +138,9 @@ button {
   margin-top: -24px;
   position: absolute;
   width: 336px;
+  display: none;
+}
+
+@media screen and (max-width:480px) {
+
 }

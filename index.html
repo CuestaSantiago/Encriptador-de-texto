@@ -21,12 +21,17 @@
     </header>
     <main>
       <section>
-        <textarea
+        <div class="textarea-container">
+          <textarea
           id="recibirMensaje"
           cols="30" rows="10"
           class="recibir_mensaje"
           placeholder="Ingrese el texto aqui"
         ></textarea>
+          <span id="btn_limpiar" class="btn_limpiar" onclick="clearTextarea()">&times;</span>
+          <span class="message">Limpiar texto</span>
+        </div>
+        
         <div>
           <h6 class="informacion">❗Solo letras minúsculas y sin acentos</h6>
         </div>
@@ -44,19 +49,19 @@
           class="mensaje"
           cols="20" rows="10"
           id="darMensaje"
-          cols=""
+          disabled
         >
         
         </textarea>
-        <div id="mensaje_vacio">
-          <p  class="mensaje_vacio">
+        <div>
+          <p  id="mensaje_vacio" class="mensaje_vacio">
             Ningún mensaje fue encontrado
             <br>
            Ingresa el texto que desees encriptar o desencriptar.
           </p>
         </div>
         <div>
-          <button class="btn_copiar" onclick="copiarMensaje()">Copiar</button>
+          <button id="btn_copiar" class="btn_copiar" onclick="copiarMensaje()">Copiar</button>
         </div>
       </section>
     </main>

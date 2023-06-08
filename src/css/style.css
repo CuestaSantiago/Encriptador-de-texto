@@ -141,6 +141,38 @@ button {
   display: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos adicionales para la apariencia de los íconos y el texto */
+.redes-sociales {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.redes-sociales a {
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.redes-sociales a:hover {
+  color: #888;
+}
+
+
 @media screen and (max-width:480px) {
 
 }
